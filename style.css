@@ -1,0 +1,173 @@
+:root {
+    --bs-body-bg: #f8f3f9;
+    --bs-body-color: #561e31;
+    --bs-body-font-family: "Nunito", sans-serif;
+    --bs-dark: #561e31;
+    --bs-dark-rgb: 86, 30, 49;
+    --bs-light: #f8f3f9;
+    --bs-light-rgb: 248, 243, 249;
+    --bs-primary: #efc0b6;
+    --bs-primary-rgb: 239, 192, 182;
+    --paf-pink: #fa198b;
+    --paf-blue: #657ed4;
+    --paf-dark-blue: #2b324a;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ANIMACIONES */
+
+@keyframes shake-it-off {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, -5%);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes fade-up {
+    0% {
+        transform: translate(0px, -5%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+
+/* ESTILOS */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+big {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 300;
+}
+
+h2 {
+    letter-spacing: 0.3em;
+    font-weight: 100;
+}
+
+h3 {
+    letter-spacing: 0.2em;
+    font-size: 0.9rem;
+}
+
+big {
+    letter-spacing: 0.5em;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+header {
+    background: url(img/mano_small.png);
+    background-position: center;
+    background-blend-mode: multiply;
+}
+
+a {
+    color: var(--paf-blue) !important;
+    transition: color 0.5s, opacity 0.5s;
+    transition-timing-function: ease-out;
+}
+
+a:visited {
+    color: var(--paf-dark-blue) !important;
+}
+
+.nav-link {
+    color: var(--bs-body-color) !important;
+    font-weight: 200 !important;
+    transition: color 1s;
+    transition-timing-function: ease-out;
+}
+
+.nav-link:visited {
+    color: var(--bs-body-color) !important;
+}
+
+a:hover,
+.nav-link:hover {
+    color: var(--paf-pink) !important;
+}
+
+.active {
+    font-weight: 700 !important;
+}
+
+#instagram:hover {
+    opacity: 0.5;
+}
+
+#header-content {
+    margin-top: 20vh;
+    margin-bottom: 7vh;
+}
+
+.img-logo {
+    animation: shake-it-off 2s infinite;
+}
+
+.img-logo-sm {
+    max-height: 100px;
+}
+
+.img-logo-xl {
+    max-height: 1000px;
+}
+
+.fade-up {
+    animation: fade-up 3s 1;
+}
+
+.paf-image {
+    position: relative;
+    overflow: hidden;
+    padding-right: 100%;
+    padding-bottom: 100%;
+}
+
+.paf-image img {
+    object-fit: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: transform .5s;
+    transition-timing-function: ease-out;
+}
+
+.paf-image img:hover {
+    transform: scale(1.1);
+}
+
+::selection {
+    background: var(--paf-pink);
+    color: white !important;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: var(--paf-pink);
+    color: white !important;
+    /* Gecko Browsers */
+}
